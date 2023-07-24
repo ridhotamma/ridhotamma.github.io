@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Merriweather', serif;
+}
+
+.container {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    animation: bouncing 2s linear infinite;
+}
+
+.container span {
+    font-size: 3em;
+}
+
+
+@keyframes bouncing {
+    0% {
+        transform: translateY(25px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    70% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(25px);
+    }
+}
