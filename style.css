@@ -1,47 +1,124 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: black;
+:root {
+    font-size: 32px;
+  }
+  
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100%;
-    font-family: 'Merriweather', serif;
-}
-
-.container {
-    color: white;
-    text-align: center;
-    display: flex;
     flex-direction: column;
-    gap: 1em;
-    animation: bouncing 2s linear infinite;
-}
-
-.container span {
-    font-size: 3em;
-}
-
-
-@keyframes bouncing {
-    0% {
-        transform: translateY(25px);
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Helvetica;
+  }
+  
+  #container {
+    width: 600px;
+  }
+  
+  h1 {
+    margin: 0;
+    letter-spacing: -2px;
+  }
+  
+  p {
+    font-size: .9rem;
+    color: #666;
+    line-height: 1.3rem;
+    position: relative;
+    top: .8rem;
+    opacity: 0;
+    animation: .5s swift-up ease-out forwards, .5s fade-in ease-out forwards;
+    animation-delay: .8s;
+  }
+  
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  span {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    top: .8rem;
+    animation: .3s swift-up ease-in-out forwards;
+  }
+  
+  i {
+    font-style: normal;
+    position: relative;
+    top: 2rem;
+    animation: .5s swift-up ease-in-out forwards;
+  }
+  
+  @keyframes swift-up {
+    to {
+      top: 0rem;
+    }
+  }
+  
+  span:nth-of-type(1) i {
+    animation-delay: 0s;
+  }
+  
+  span:nth-of-type(2) i {
+    animation-delay: .1s;
+  }
+  
+  span:nth-of-type(3) i {
+    animation-delay: .2s;
+  }
+  
+  span:nth-of-type(4) i {
+    animation-delay: .3s;
+  }
+  
+  span:nth-of-type(5) i {
+    animation-delay: .4s;
+  }
+  
+  span:nth-of-type(6) i {
+    animation-delay: .5s;
+  }
+  
+  span:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  
+  span:nth-of-type(2) {
+    animation-delay: .1s;
+  }
+  
+  span:nth-of-type(3) {
+    animation-delay: .2s;
+  }
+  
+  span:nth-of-type(4) {
+    animation-delay: .3s;
+  }
+  
+  span:nth-of-type(5) {
+    animation-delay: .4s;
+  }
+  
+  span:nth-of-type(6) {
+    animation-delay: .5s;
+  }
+  
+  @media screen and (max-width: 780px) {
+    #container {
+      width: 80%;
+      margin: 0 auto;
     }
 
-    50% {
-        transform: translateY(0px);
+    h1 {
+      font-size: 1em;
     }
 
-    70% {
-        transform: translateY(10px);
+    p {
+      font-size: 14px;
+      line-height: 1.2;
     }
-
-    100% {
-        transform: translateY(25px);
-    }
-}
+  }
